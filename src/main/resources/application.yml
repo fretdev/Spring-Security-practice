@@ -1,0 +1,12 @@
+config:
+  application:
+    name: "security-practice"
+  config:
+    import: "optional:file:.env"
+
+app:
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration: ${JWT_EXPIRATION:15}
+    issuer: "security-practice"
+    clock-skew-seconds: 30
